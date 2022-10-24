@@ -27,7 +27,7 @@ pipeline {
                 }
             }
 
-        stage('Plan') {
+        stage('Build') {
             when {
                 not {
                     equals expected: true, actual: params.destroy
@@ -64,7 +64,7 @@ pipeline {
            }
        }
 
-        stage('Apply') {
+        stage('Deploy') {
             when {
                 not {
                     equals expected: true, actual: params.destroy
